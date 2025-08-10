@@ -173,6 +173,7 @@
             top: 150px;
             margin-right: 20px;
             font-size: 30px;
+            z-index: 1001;
         }
 
 
@@ -265,6 +266,91 @@
             background-position: left top;
             color: #232526;
         }
+  
+
+     /* --- استبدل @media (max-width: 768px) الموجود عندك بهذا --- */
+@media (max-width: 768px) {
+  /* shrink header text / logo text */
+  .zaktext a {
+    margin-top: 10px;
+    font-size:25px;
+    
+  }
+
+  /* logo */
+  .logo {
+    width: 45px;
+    height: 45px;
+    top: 8px;
+    right: 8px;
+  }
+
+  /* top buttons */
+  .top-bar {
+    padding: 8px 12px 0 0;
+  }
+  .login-btn,
+  .cart-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* hero section */
+  .case-bg-section {
+          max-width: 330px;
+        min-height: 100px;
+        margin-top: 200px;
+        margin-bottom: 20px;
+    padding: 10px;
+  }
+  .case-bg-section h2 {
+    font-size: 1.6rem;
+    padding: 10px 16px;
+  }
+
+  /* ===== هنا التغيير اللي يخلي كل ثنتين جنب بعض ===== */
+  .products-grid {
+    display: grid;                       /* grid بدل flex */
+    grid-template-columns: repeat(2, 1fr); /* عمودين */
+    gap: 14px;                           /* فراغ بين الكروت */
+    justify-items: center;
+    padding: 0 12px;                     /* مسافة عن طرف الشاشة */
+    margin-top: 20px;
+  }
+
+  .product-card {
+    width: 100%;         /* يشغل عمود واحد في الـ grid */
+    max-width: none;
+    box-sizing: border-box;
+    margin-bottom: 14px;
+    padding: 14px;
+  }
+
+  /* صغّر الصور والعناوين */
+  .img-card {
+    width: 140px;
+    height: 140px;
+  }
+  .product-title { font-size: 1rem; }
+  .product-company,
+  .product-price { font-size: 0.95rem; }
+  .add-cart { font-size: 0.95rem; padding: 6px 12px; }
+}
+
+/* اختياري: لو تحب تخلي شاشات صغيرة جداً تتحوّل لعمود واحد */
+@media (max-width: 360px) {
+  .products-grid {
+    grid-template-columns: 1fr; /* صف واحد على الهواتف الصغيرة جداً */
+  }
+
+  .img-card {
+    width: 120px;
+    height: 120px;
+  }
+  .zaktext a { font-size: 1.2rem; }
+}
+
+
     </style>
 </head>
 
