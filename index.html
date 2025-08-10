@@ -218,6 +218,102 @@
   }
 
 
+  /*css for mobile*/
+
+  @media (max-width: 768px) {
+  body {
+    padding-top: 120px;
+  }
+
+  header div {
+    font-size: 1.8rem;
+    padding: 15px 0;
+  }
+
+  header h3 {
+    font-size: 1.2rem;
+    padding: 10px 0;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    top: 4px;
+  }
+
+  .top-bar {
+    padding: 5px 15px 0 0;
+    gap: 5px;
+  }
+
+  .login-btn,
+  .cart-btn {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
+
+  .categories {
+    padding: 0 10px;
+     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+  }
+
+  .category-card {
+    
+    width: 90%;
+    height: auto;
+    
+    padding: 15px 10px;
+  }
+
+  .category-image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .category-title {
+    font-size: 1rem;
+  }
+
+  .category-desc {
+    font-size: 0.85rem;
+  }
+}
+
+/* للجوال الصغير أقل من 480px */
+@media (max-width: 480px) {
+
+
+  .category-card {
+    width: 90%;
+  }
+
+  .category-image img {
+    width: 70px;
+    height: 70px;
+  }
+
+  header div {
+    font-size: 1.2rem;
+    margin-left: 30px;
+  }
+
+  
+  header h3 {
+    font-size: 1.2rem;
+    padding: 10px 0;
+  }
+
+  .category-title {
+    font-size: 0.95rem;
+  }
+
+  .category-desc {
+    font-size: 0.8rem;
+  }
+}
+
   </style>
 </head>
 
