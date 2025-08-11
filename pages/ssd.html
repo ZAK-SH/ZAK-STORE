@@ -8,7 +8,7 @@
     <title>كروت الشاشة</title>
 
     <style>
-        body {
+             body {
             font-family: 'Cairo', Arial, sans-serif;
             background: rgb(65, 67, 69);
             color: #fff;
@@ -100,34 +100,6 @@
             transform: scale(1.1);
         }
 
-        header h3 {
-            position: fixed;
-            top: 45px;
-            width: 100%;
-            height: 10px;
-            padding: 20px 0;
-            margin-bottom: 10px;
-            z-index: 1000;
-            color: white;
-            font-size: 2rem;
-            text-align: center;
-            line-height: 10px;
-            background: linear-gradient(270deg, red, orange, rgb(1, 190, 1), cyan, blue, violet, red);
-            background-size: 1500% 1500%;
-            animation: rgbMove 10s linear infinite;
-        }
-
-
-        @keyframes rgbMove {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            100% {
-                background-position: 100% 50%;
-            }
-        }
-
 
         .case-bg-section {
             background: url('../all image/img-ssd/ssd background.jpg') center/cover no-repeat;
@@ -140,7 +112,7 @@
             box-shadow: 0 4px 24px #000000c2;
             position: relative;
             margin-bottom: 80px;
-            margin-top: 180px;
+            margin-top: 100px;
             margin-left: auto;
             margin-right: auto;
             background-size: 100%;
@@ -173,6 +145,7 @@
             top: 150px;
             margin-right: 20px;
             font-size: 30px;
+            z-index: 1001;
         }
 
 
@@ -265,6 +238,102 @@
             background-position: left top;
             color: #232526;
         }
+  
+
+     /* --- استبدل @media (max-width: 768px) الموجود عندك بهذا --- */
+@media (max-width: 768px) {
+
+    .link{
+        top: 75px;
+    }
+    header {
+        padding-top: 0;
+        padding-bottom: 25px;
+    }
+
+    header div{
+        padding: 0 auto 30 auto;
+
+    }
+
+
+    .zaktext a {
+         margin-top: 5px;
+        font-size: 30px;
+      margin-left: 30px;
+        left: 30%;
+        top: 5px;
+  }
+
+  .zaktext {
+            transition: all 0.3s ease;
+            display: inline-block;
+            color: #00e6d3;
+            font-weight: bold;
+        }
+
+  /* shrink header text / logo text */
+  
+  /* logo */
+  .logo {
+    width: 40px;
+    height: 40px;
+    top: 4px;
+    right: 8px;
+  }
+
+  /* top buttons */
+  .top-bar {
+    padding: 8px 12px 0 0;
+  }
+  .login-btn,
+  .cart-btn {
+padding: 6px 6px;
+    font-size: 0.9rem;
+  }
+
+  /* hero section */
+  .case-bg-section {
+          max-width: 330px;
+        min-height: 100px;
+        margin-top: 115px;
+        margin-bottom: 20px;
+    padding: 10px;
+  }
+  .case-bg-section h2 {
+    font-size: 1.6rem;
+    padding: 10px 16px;
+  }
+
+  /* ===== هنا التغيير اللي يخلي كل ثنتين جنب بعض ===== */
+  .products-grid {
+    display: grid;                       /* grid بدل flex */
+    grid-template-columns: repeat(2, 1fr); /* عمودين */
+    gap: 14px;                           /* فراغ بين الكروت */
+    justify-items: center;
+    padding: 0 12px;                     /* مسافة عن طرف الشاشة */
+    margin-top: 20px;
+  }
+
+  .product-card {
+    width: 100%;         /* يشغل عمود واحد في الـ grid */
+    max-width: none;
+    box-sizing: border-box;
+    margin-bottom: 14px;
+    padding: 14px;
+  }
+
+  /* صغّر الصور والعناوين */
+  .img-card {
+    width: 140px;
+    height: 140px;
+  }
+  .product-title { font-size: 1rem; }
+  .product-company,
+  .product-price { font-size: 0.95rem; }
+  .add-cart { font-size: 0.95rem; padding: 6px 12px; }
+}
+
     </style>
 
 </head>
@@ -277,9 +346,7 @@
         <div class="zaktext">
             <a href="../index.html">ZAK STORE</a>
         </div>
-        <h3>
-            عروض حصرية بمناسبة الافتتاح
-        </h3>
+     
     </header>
 
 
@@ -299,7 +366,6 @@
     <div class="container">
 
         <div class="case-bg-section">
-            <h2>قسم ذاكره التخزين</h2>
         </div>
 
         <div class="products-grid">

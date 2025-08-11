@@ -166,6 +166,62 @@
         link a:visited:hover {
             color: #00bfae;
         }
+        
+        @media (max-width: 768px) {
+    .link{
+        flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    }
+     header {
+        padding-top: 0;
+        padding-bottom: 25px;
+    }
+
+    header div{
+        padding: 0 auto 30 auto;
+
+    }
+
+
+    .zaktext a {
+         margin-top: 5px;
+        font-size: 30px;
+      margin-left: 30px;
+        left: 30%;
+        top: 5px;
+  }
+
+  .zaktext {
+            transition: all 0.3s ease;
+            display: inline-block;
+            color: #00e6d3;
+            font-weight: bold;
+        }
+
+  /* shrink header text / logo text */
+  
+  /* logo */
+  .logo {
+    width: 40px;
+    height: 40px;
+    top: 4px;
+    right: 8px;
+  }
+
+  /* top buttons */
+  .top-bar {
+    padding: 8px 12px 0 0;
+  }
+  .login-btn,
+  .cart-btn {
+padding: 6px 6px;
+    font-size: 0.9rem;
+  }
+}
+.container{
+  max-width: 300px;
+}
     </style>
 </head>
 
@@ -175,9 +231,6 @@
         <div class="zaktext">
             <a href="../index.html">ZAK STORE</a>
         </div>
-        <h3>
-            عروض حصرية بمناسبة الافتتاح
-        </h3>
     </header>
 
     <div class="top-bar">
